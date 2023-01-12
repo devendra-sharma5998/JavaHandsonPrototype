@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p style="color:black">Question1.
+        Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype
+
+    </p >
+    <pre style="color: red;">
+        Ans.
+        const ParentObj ={
+            calAge : function(){
+                console.log(`${this.fname} ${this.lname} ${this.age}`)
+            }
+        }
+        const childObj= Object.create(ParentObj);
+        childObj.fname="EA18";
+        childObj.lname="18";
+        childObj.age="Oct Batch";
+        
+        childObj.calAge();
+    </pre>
+    <br><br>
+
+    <p style="color:black">Question 2.
+        Write code to explain prototype chaining
+    </p>
+    <pre style="color: red;">
+        Ans.
+        let abc=["dev","sharma"];
+        console.log(abc)
+
+
+      this is the e.g of prototype chaining
+    <br><br>
+
+    <p style="color:black">
+        Question 3.
+        Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays
+    </p>
+    <pre style="color: red;">
+        Ans.
+        const ParentObj2={
+            calSum:function(arr){
+             let sum=0;
+              for(let i=0;i< arr.length;i++){
+                sum += arr[i]
+              }
+              console.log(sum)
+            }
+          }
+          ParentObj2.calSum([1,2,3,4,5,6])
+    </pre>
+    <br><br>
+    <p style="color:black">
+        Question 4.
+        Write a JavaScript function to retrieve all the names of object's own and inherited properties.
+    </p>
+    <pre style="color: red;">
+        Ans.
+        let obj={
+            name:"hem",
+            batch:"EA18",
+            year:"2022"
+        }
+        let result=Object.keys(obj);
+        console.log(result)
+    </pre>
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
